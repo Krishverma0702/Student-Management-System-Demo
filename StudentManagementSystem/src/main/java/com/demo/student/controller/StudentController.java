@@ -6,12 +6,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.student.model.Student;
 import com.demo.student.service.StudentService;
 
 @Controller
-
 public class StudentController {
 	
 	@Autowired
@@ -19,7 +20,6 @@ public class StudentController {
 	
 	@GetMapping("/")
 	public String showForm(Model model) {
-
 		model.addAttribute("student", new Student());
 		return "index";
 	}

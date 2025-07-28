@@ -12,7 +12,7 @@ import com.demo.student.model.Student;
 public class StudentRepository {
 	public String saveData(Student s) {
 		Configuration cfg = new Configuration();
-		cfg.addAnnotatedClass(Student.class);
+		cfg.addAnnotatedClass(com.demo.student.model.Student.class);
 		
 		SessionFactory sf = cfg.buildSessionFactory();
 		
